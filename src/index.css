@@ -1,0 +1,138 @@
+:root {
+  --bg: #14110f;
+  --panel: #1d1815;
+  --panel-2: #241e19;
+  --orange: #e86a1c;
+  --orange-hover: #f07a30;
+  --teal: #49c7c0;
+  --risk: #d65a4a;
+  --text: #f5f1ea;
+  --muted: #a79d8f;
+  --hairline: rgba(245, 241, 234, 0.08);
+  --hairline-strong: rgba(245, 241, 234, 0.16);
+  --font-display: 'Oswald', sans-serif;
+  --font-body: 'Work Sans', sans-serif;
+  --header-h: 88px;
+  --max: 1240px;
+  --radius: 22px;
+  --radius-lg: 28px;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--header-h);
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg);
+  background-image:
+    linear-gradient(rgba(245, 241, 234, 0.028) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(245, 241, 234, 0.028) 1px, transparent 1px);
+  background-size: 56px 56px;
+  color: var(--text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1.12;
+  letter-spacing: 0.01em;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+::selection {
+  background: rgba(232, 106, 28, 0.28);
+  color: var(--text);
+}
+
+:focus-visible {
+  outline: 2px solid var(--orange);
+  outline-offset: 3px;
+}
+
+.btn:focus-visible,
+.tab:focus-visible,
+.nav-toggle:focus-visible,
+.sol-nav button:focus-visible,
+.hero-dots button:focus-visible {
+  outline-offset: 3px;
+}
+
+.skip-link {
+  position: absolute;
+  left: 16px;
+  top: -48px;
+  z-index: 100;
+  background: var(--orange);
+  color: var(--bg);
+  padding: 8px 14px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.skip-link:focus {
+  top: 12px;
+}
