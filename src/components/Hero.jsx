@@ -113,8 +113,8 @@ export default function Hero() {
               insights, and actionable plans.
             </p>
             <div className="hero-actions">
-              <a className="btn btn-primary" href="#architecture">
-                View architecture
+              <a className="btn btn-primary" href="/product">
+                Averonix X.1
                 <span className="btn-arrow-wrap">→</span>
               </a>
               <button

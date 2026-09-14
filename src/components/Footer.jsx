@@ -85,7 +85,7 @@ export default function Footer() {
           <div>
             <h4>Access</h4>
             <div className="footer-links">
-              <a href="#contact">Averonix X.1</a>
+              <a href="/product">Averonix X.1</a>
               <a href="#faq">FAQ</a>
               <a href="#privacy">Privacy Policy</a>
               <a href="#terms">Terms and Conditions</a>

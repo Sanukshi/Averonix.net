@@ -4070,3 +4070,950 @@
   }
 }
 
+/* ========================================================================== */
+/* AVERONIX X.1 PRODUCT PAGE STYLING                                          */
+/* ========================================================================== */
+
+.product-page {
+  position: relative;
+  min-height: 100vh;
+}
+
+/* ——— Product Hero ——— */
+.product-hero {
+  padding: 64px 0 88px;
+  position: relative;
+  overflow: hidden;
+}
+
+.product-hero::before {
+  content: '';
+  position: absolute;
+  top: -120px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 900px;
+  height: 500px;
+  background: radial-gradient(ellipse at center, rgba(232, 106, 28, 0.12), transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.product-hero-inner {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 56px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.product-hero-copy {
+  max-width: 540px;
+}
+
+.product-hero-title {
+  font-size: clamp(34px, 4.2vw, 54px);
+  text-transform: uppercase;
+  line-height: 1.08;
+  margin-bottom: 20px;
+}
+
+.product-hero-title em {
+  font-style: normal;
+  color: var(--orange);
+}
+
+.product-hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 32px;
+  flex-wrap: wrap;
+}
+
+.btn-hero-cta {
+  padding: 15px 28px !important;
+  font-size: 15px !important;
+  box-shadow: 0 6px 24px rgba(232, 106, 28, 0.32);
+}
+
+.btn-hero-cta:hover {
+  box-shadow: 0 8px 30px rgba(232, 106, 28, 0.45);
+}
+
+.product-hero-meta {
+  margin-top: 24px;
+}
+
+.meta-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(20, 17, 15, 0.85);
+  border: 1px solid var(--hairline-strong);
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.meta-badge strong {
+  color: var(--text);
+}
+
+.pulse-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--teal);
+  box-shadow: 0 0 10px var(--teal);
+  animation: pulseTeal 2s infinite ease-in-out;
+}
+
+@keyframes pulseTeal {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.3);
+    opacity: 0.65;
+  }
+}
+
+/* ——— Product Console Visualizer ——— */
+.product-hero-preview {
+  position: relative;
+}
+
+.product-console-frame {
+  background: #181412;
+  border: 1px solid var(--hairline-strong);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 28px 72px rgba(0, 0, 0, 0.65), 0 0 0 1px rgba(245, 241, 234, 0.05);
+}
+
+.product-console-header {
+  background: #110e0c;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--hairline);
+}
+
+.console-window-dots {
+  display: flex;
+  gap: 6px;
+}
+
+.console-window-dots span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(245, 241, 234, 0.2);
+}
+
+.console-window-dots span:nth-child(1) {
+  background: rgba(214, 90, 74, 0.7);
+}
+.console-window-dots span:nth-child(2) {
+  background: rgba(232, 106, 28, 0.7);
+}
+.console-window-dots span:nth-child(3) {
+  background: rgba(73, 199, 192, 0.7);
+}
+
+.console-title {
+  font-family: var(--font-body);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  color: var(--muted);
+  margin-left: 14px;
+  flex: 1;
+  font-weight: 500;
+}
+
+.console-status-pill {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--teal);
+  background: rgba(73, 199, 192, 0.12);
+  border: 1px solid rgba(73, 199, 192, 0.35);
+  padding: 3px 9px;
+  border-radius: 999px;
+}
+
+.product-console-telemetry {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--hairline);
+  border-bottom: 1px solid var(--hairline);
+}
+
+.telemetry-box {
+  background: #191512;
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.telemetry-box span {
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.telemetry-box strong {
+  font-family: var(--font-display);
+  font-size: 16px;
+  color: var(--text);
+  letter-spacing: 0.04em;
+}
+
+.product-console-chart-wrap {
+  padding: 20px;
+  background: #15110f;
+}
+
+.product-console-body {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.console-top-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.console-live-tag {
+  color: var(--teal);
+  font-weight: 600;
+}
+
+.console-live-tag.status-alert {
+  color: var(--risk);
+}
+
+.console-cadence {
+  font-size: 10px;
+  color: var(--muted);
+}
+
+.product-svg-chart {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.console-stat-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 6px;
+}
+
+.console-stat-pill {
+  background: rgba(245, 241, 234, 0.03);
+  border: 1px solid var(--hairline);
+  border-radius: 12px;
+  padding: 10px 12px;
+}
+
+.console-stat-pill small {
+  display: block;
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+  margin-bottom: 2px;
+}
+
+.console-stat-pill strong {
+  font-size: 13px;
+  color: var(--text);
+  display: block;
+}
+
+.accent-teal {
+  color: var(--teal) !important;
+}
+
+.accent-orange {
+  color: var(--orange) !important;
+}
+
+/* ——— Interactive Preview Variants (Risk, Scenarios, Dispatch) ——— */
+.risk-matrix-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 8px 0;
+}
+
+.risk-matrix-item {
+  background: rgba(245, 241, 234, 0.03);
+  border: 1px solid var(--hairline);
+  border-left: 3px solid var(--teal);
+  border-radius: 10px;
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.risk-matrix-item.is-critical {
+  border-left-color: var(--risk);
+  background: rgba(214, 90, 74, 0.08);
+}
+
+.risk-item-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.risk-badge {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--risk);
+}
+
+.risk-badge.warning {
+  color: var(--orange);
+}
+
+.risk-time {
+  font-size: 11px;
+  color: var(--muted);
+  font-family: var(--font-display);
+}
+
+.risk-matrix-item strong {
+  font-size: 14px;
+  color: var(--text);
+}
+
+.risk-matrix-item p {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+.risk-rec {
+  font-size: 12px;
+  color: var(--teal);
+  font-weight: 500;
+}
+
+.scenario-diff-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  padding: 10px 0;
+}
+
+.scenario-card {
+  background: rgba(245, 241, 234, 0.03);
+  border: 1px solid var(--hairline);
+  border-radius: 14px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.scenario-card.active {
+  border-color: rgba(73, 199, 192, 0.4);
+  background: rgba(73, 199, 192, 0.06);
+}
+
+.scen-tag {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--teal);
+}
+
+.scen-title {
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+}
+
+.scen-val {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.scen-sub {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.dispatch-preview-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 10px 0;
+}
+
+.dispatch-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: rgba(245, 241, 234, 0.03);
+  border: 1px solid var(--hairline);
+  border-radius: 12px;
+  padding: 14px 16px;
+}
+
+.dispatch-check {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(73, 199, 192, 0.15);
+  color: var(--teal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 13px;
+  flex-shrink: 0;
+}
+
+.dispatch-item strong {
+  display: block;
+  font-size: 13px;
+  color: var(--text);
+}
+
+.dispatch-item p {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.dispatch-status {
+  margin-left: auto;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--teal);
+  background: rgba(73, 199, 192, 0.1);
+  padding: 4px 8px;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+
+/* ——— Section 2: Product Capabilities Tabs ——— */
+.product-tabs-nav {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.product-tab-btn {
+  background: var(--panel);
+  border: 1px solid var(--hairline-strong);
+  border-radius: 14px;
+  padding: 14px 20px;
+  text-align: left;
+  cursor: pointer;
+  transition: all 240ms ease;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 200px;
+}
+
+.product-tab-btn span {
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--text);
+  text-transform: uppercase;
+}
+
+.product-tab-btn small {
+  font-size: 11px;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+}
+
+.product-tab-btn:hover {
+  border-color: rgba(232, 106, 28, 0.4);
+  transform: translateY(-1px);
+}
+
+.product-tab-btn.is-active {
+  border-color: var(--orange);
+  background: var(--panel-2);
+  box-shadow: 0 4px 20px rgba(232, 106, 28, 0.15);
+}
+
+.product-tab-btn.is-active span {
+  color: var(--orange);
+}
+
+.product-capability-card {
+  background: var(--panel);
+  border: 1px solid var(--hairline-strong);
+  border-radius: var(--radius-lg);
+  padding: 48px;
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.cap-content-col h3 {
+  font-size: clamp(24px, 2.8vw, 36px);
+  text-transform: uppercase;
+  margin-top: 12px;
+  margin-bottom: 16px;
+}
+
+.cap-content-col p {
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.cap-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin: 28px 0;
+}
+
+.cap-metric-card {
+  background: var(--panel-2);
+  border: 1px solid var(--hairline);
+  border-radius: 12px;
+  padding: 14px 16px;
+}
+
+.cap-metric-card b {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 24px;
+  color: var(--orange);
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.cap-metric-card span {
+  font-size: 11px;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.cap-features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.cap-features-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 14px;
+  color: var(--text);
+  line-height: 1.5;
+}
+
+.cap-features-list li svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.cap-interactive-shell {
+  background: #14110f;
+  border: 1px solid var(--hairline-strong);
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.45);
+}
+
+/* ——— Section 3: Workflow Grid ——— */
+.workflow-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.workflow-card {
+  background: var(--panel);
+  border: 1px solid var(--hairline-strong);
+  border-radius: var(--radius);
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 240ms ease, border-color 240ms ease;
+}
+
+.workflow-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(232, 106, 28, 0.45);
+}
+
+.workflow-card-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.workflow-num {
+  font-family: var(--font-display);
+  font-size: 32px;
+  color: var(--orange);
+  font-weight: 700;
+}
+
+.workflow-tag {
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  background: rgba(245, 241, 234, 0.05);
+  border: 1px solid var(--hairline);
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+.workflow-card h4 {
+  font-size: 19px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.workflow-role {
+  display: block;
+  font-size: 12px;
+  color: var(--teal);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.workflow-card p {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+/* ——— Section 4: NVIDIA AI Acceleration Stack ——— */
+.nvidia-stack-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 36px;
+}
+
+.nvidia-card {
+  background: #181412;
+  border: 1px solid var(--hairline-strong);
+  border-radius: var(--radius);
+  padding: 36px 28px;
+  display: flex;
+  flex-direction: column;
+  transition: border-color 240ms ease, transform 240ms ease;
+}
+
+.nvidia-card:hover {
+  border-color: rgba(73, 199, 192, 0.5);
+  transform: translateY(-2px);
+}
+
+.nvidia-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.nvidia-badge {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #76b900;
+  background: rgba(118, 185, 0, 0.12);
+  border: 1px solid rgba(118, 185, 0, 0.35);
+  padding: 4px 12px;
+  border-radius: 999px;
+}
+
+.nvidia-tag {
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+}
+
+.nvidia-card h3 {
+  font-size: 22px;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.nvidia-role {
+  display: block;
+  font-size: 12px;
+  color: var(--teal);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.nvidia-summary {
+  font-size: 14px;
+  color: var(--text);
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.nvidia-points {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: auto;
+  padding-top: 16px;
+  border-top: 1px solid var(--hairline);
+}
+
+.nvidia-point-row {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.point-bullet {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--teal);
+  margin-top: 8px;
+  flex-shrink: 0;
+}
+
+.nvidia-point-row p {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.nvidia-metrics-banner {
+  background: #191512;
+  border: 1px solid var(--hairline-strong);
+  border-radius: 18px;
+  padding: 24px 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 24px;
+}
+
+.nvidia-metric-item {
+  text-align: center;
+  flex: 1;
+}
+
+.nvidia-metric-divider {
+  width: 1px;
+  height: 44px;
+  background: var(--hairline-strong);
+}
+
+.metric-val {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 19px;
+  font-weight: 600;
+  color: var(--text);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.metric-lbl {
+  display: block;
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 4px;
+}
+
+/* ——— Section 5: Impact Metrics Grid ——— */
+.impact-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.impact-stat-card {
+  background: var(--panel);
+  border: 1px solid var(--hairline-strong);
+  border-radius: var(--radius);
+  padding: 40px 24px;
+  text-align: center;
+  transition: transform 240ms ease;
+}
+
+.impact-stat-card:hover {
+  transform: translateY(-2px);
+}
+
+.stat-big-val {
+  font-family: var(--font-display);
+  font-size: clamp(38px, 4.4vw, 54px);
+  font-weight: 700;
+  color: var(--orange);
+  line-height: 1;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.impact-stat-card h4 {
+  font-size: 17px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.impact-stat-card p {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+/* ——— Section 6: Final CTA Box ——— */
+.product-final-cta {
+  padding: 96px 0;
+}
+
+.product-cta-box {
+  background: radial-gradient(circle at 50% 0%, rgba(232, 106, 28, 0.18), transparent 75%), var(--panel);
+  border: 1px solid rgba(232, 106, 28, 0.35);
+  border-radius: var(--radius-lg);
+  padding: 72px 48px;
+  text-align: center;
+  max-width: 980px;
+  margin-inline: auto;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.5);
+}
+
+.product-cta-copy h2 {
+  font-size: clamp(32px, 4vw, 48px);
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.product-cta-copy .lede {
+  margin-inline: auto;
+}
+
+.product-cta-actions {
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+  margin: 36px 0 28px;
+  flex-wrap: wrap;
+}
+
+.product-cta-notes {
+  font-size: 12px;
+  color: var(--muted);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* ——— Responsive Layout for Product Page ——— */
+@media (max-width: 1080px) {
+  .product-hero-inner {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .product-hero-copy {
+    max-width: 100%;
+  }
+
+  .product-capability-card {
+    grid-template-columns: 1fr;
+    padding: 32px;
+  }
+
+  .workflow-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .nvidia-stack-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nvidia-metrics-banner {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .nvidia-metric-divider {
+    width: 60px;
+    height: 1px;
+  }
+
+  .impact-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .product-console-telemetry {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cap-metrics-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .workflow-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .impact-stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-tab-btn {
+    width: 100%;
+    min-width: unset;
+  }
+
+  .product-cta-box {
+    padding: 48px 20px;
+  }
+}
+
+

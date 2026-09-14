@@ -14,9 +14,11 @@ export default function Header() {
       if (e.key === 'Escape') close()
     }
     window.addEventListener('hashchange', close)
+    window.addEventListener('popstate', close)
     window.addEventListener('keydown', onKey)
     return () => {
       window.removeEventListener('hashchange', close)
+      window.removeEventListener('popstate', close)
       window.removeEventListener('keydown', onKey)
     }
   }, [])
@@ -45,7 +47,7 @@ export default function Header() {
 
         <div className="header-cta">
           <span className="header-meta">averonix.net</span>
-          <a className="btn btn-primary" href="#contact">
+          <a className="btn btn-primary" href="/product">
             Averonix X.1
             <span className="btn-arrow-wrap" aria-hidden="true">
               →
